@@ -48,7 +48,7 @@ app.layout = html.Div([
         id='country_drop_down',
         options=[{'label': each, 'value': each}
                  for each in df_confirmed['country'].unique()],
-        value=['US', 'Italy', 'Spain'],  # which are pre-selected
+        value=['United States', 'Italy', 'Spain'],  # which are pre-selected
         multi=True
     ),
 

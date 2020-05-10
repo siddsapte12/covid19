@@ -13,6 +13,10 @@ def store_relational_JH_data(data_path, value='confirmed'):
 
     pd_data_base = pd_raw.rename(columns={'Country/Region': 'country',
                                           'Province/State': 'state'})
+    pd_data_base['country'] = pd_data_base['country'].str.replace(
+        'US', 'United States')
+    pd_data_base['state'] = pd_data_base['state'].str.replace(
+        'US', 'United States')
 
     pd_data_base['state'] = pd_data_base['state'].fillna('no')
 
